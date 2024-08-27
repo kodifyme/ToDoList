@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ListViewInput {
+protocol ListViewInput: AnyObject {
     var output: ListViewOutput? { get set }
     func updateTasks(_ tasks: [Task])
 }
@@ -15,6 +15,7 @@ protocol ListViewInput {
 protocol ListViewOutput {
     func viewDidLoad()
     func didTapAddButton()
+    func didSelectTask(at index: Int)
 }
 
 class ListViewController: UIViewController {

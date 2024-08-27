@@ -12,7 +12,10 @@
 		1245CBD02C79ECF600A10E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1245CBCF2C79ECF600A10E6F /* Assets.xcassets */; };
 		1245CBD32C79ECF600A10E6F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1245CBD22C79ECF600A10E6F /* Base */; };
 		1245CBE32C79F62E00A10E6F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245CBE22C79F62E00A10E6F /* ListViewController.swift */; };
+		12A2DC3F2C7DFBDA006E6B68 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC3E2C7DFBDA006E6B68 /* ListRouter.swift */; };
 		12BDB04A2C7CE034003F1D60 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDB0492C7CE034003F1D60 /* Task.swift */; };
+		12BDB04E2C7CE60A003F1D60 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDB04D2C7CE60A003F1D60 /* ListInteractor.swift */; };
+		12BDB0502C7CE87A003F1D60 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDB04F2C7CE87A003F1D60 /* ListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +26,10 @@
 		1245CBD22C79ECF600A10E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1245CBD42C79ECF600A10E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1245CBE22C79F62E00A10E6F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		12A2DC3E2C7DFBDA006E6B68 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		12BDB0492C7CE034003F1D60 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		12BDB04D2C7CE60A003F1D60 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		12BDB04F2C7CE87A003F1D60 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		1245CBDD2C79F58500A10E6F /* ListRouter */ = {
 			isa = PBXGroup;
 			children = (
+				12A2DC3E2C7DFBDA006E6B68 /* ListRouter.swift */,
 			);
 			path = ListRouter;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 		1245CBDE2C79F59600A10E6F /* ListInteracor */ = {
 			isa = PBXGroup;
 			children = (
+				12BDB04D2C7CE60A003F1D60 /* ListInteractor.swift */,
 			);
 			path = ListInteracor;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 		1245CBE02C79F5BF00A10E6F /* ListPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				12BDB04F2C7CE87A003F1D60 /* ListPresenter.swift */,
 			);
 			path = ListPresenter;
 			sourceTree = "<group>";
@@ -201,9 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12BDB04E2C7CE60A003F1D60 /* ListInteractor.swift in Sources */,
+				12A2DC3F2C7DFBDA006E6B68 /* ListRouter.swift in Sources */,
 				12BDB04A2C7CE034003F1D60 /* Task.swift in Sources */,
 				1245CBC72C79ECF500A10E6F /* AppDelegate.swift in Sources */,
 				1245CBC92C79ECF500A10E6F /* SceneDelegate.swift in Sources */,
+				12BDB0502C7CE87A003F1D60 /* ListPresenter.swift in Sources */,
 				1245CBE32C79F62E00A10E6F /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
