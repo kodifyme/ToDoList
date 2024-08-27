@@ -24,7 +24,7 @@ extension ListPresenter: ListViewOutput {
     }
     
     func didTapAddButton() {
-        
+        router?.navigateToAddTask()
     }
     
     func didSelectTask(at index: Int) {

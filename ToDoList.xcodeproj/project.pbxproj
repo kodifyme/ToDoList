@@ -13,6 +13,11 @@
 		1245CBD32C79ECF600A10E6F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1245CBD22C79ECF600A10E6F /* Base */; };
 		1245CBE32C79F62E00A10E6F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1245CBE22C79F62E00A10E6F /* ListViewController.swift */; };
 		12A2DC3F2C7DFBDA006E6B68 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC3E2C7DFBDA006E6B68 /* ListRouter.swift */; };
+		12A2DC532C7E012B006E6B68 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC522C7E012B006E6B68 /* TaskViewController.swift */; };
+		12A2DC552C7E0131006E6B68 /* TaskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC542C7E0131006E6B68 /* TaskInteractor.swift */; };
+		12A2DC572C7E0136006E6B68 /* TaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC562C7E0136006E6B68 /* TaskPresenter.swift */; };
+		12A2DC592C7E013B006E6B68 /* TaskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC582C7E013B006E6B68 /* TaskRouter.swift */; };
+		12A2DC642C7E3FE0006E6B68 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A2DC632C7E3FE0006E6B68 /* UIStackView + Extensions.swift */; };
 		12BDB04A2C7CE034003F1D60 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDB0492C7CE034003F1D60 /* Task.swift */; };
 		12BDB04E2C7CE60A003F1D60 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDB04D2C7CE60A003F1D60 /* ListInteractor.swift */; };
 		12BDB0502C7CE87A003F1D60 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDB04F2C7CE87A003F1D60 /* ListPresenter.swift */; };
@@ -27,6 +32,11 @@
 		1245CBD42C79ECF600A10E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1245CBE22C79F62E00A10E6F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		12A2DC3E2C7DFBDA006E6B68 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		12A2DC522C7E012B006E6B68 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		12A2DC542C7E0131006E6B68 /* TaskInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInteractor.swift; sourceTree = "<group>"; };
+		12A2DC562C7E0136006E6B68 /* TaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresenter.swift; sourceTree = "<group>"; };
+		12A2DC582C7E013B006E6B68 /* TaskRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRouter.swift; sourceTree = "<group>"; };
+		12A2DC632C7E3FE0006E6B68 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
 		12BDB0492C7CE034003F1D60 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		12BDB04D2C7CE60A003F1D60 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		12BDB04F2C7CE87A003F1D60 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
@@ -64,6 +74,8 @@
 			children = (
 				1245CBDB2C79EDD400A10E6F /* Application */,
 				1245CBDC2C79F57400A10E6F /* ListModule */,
+				12A2DC4D2C7E00E0006E6B68 /* TaskModule */,
+				12A2DC622C7E3FD1006E6B68 /* Extensions */,
 				1245CBDA2C79EDC500A10E6F /* Resources */,
 			);
 			path = ToDoList;
@@ -140,6 +152,57 @@
 			path = ListEntity;
 			sourceTree = "<group>";
 		};
+		12A2DC4D2C7E00E0006E6B68 /* TaskModule */ = {
+			isa = PBXGroup;
+			children = (
+				12A2DC512C7E011D006E6B68 /* TaskRouter */,
+				12A2DC502C7E0113006E6B68 /* TaskPresenter */,
+				12A2DC4F2C7E0107006E6B68 /* TaskInteractor */,
+				12A2DC4E2C7E00F2006E6B68 /* TaskView */,
+			);
+			path = TaskModule;
+			sourceTree = "<group>";
+		};
+		12A2DC4E2C7E00F2006E6B68 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				12A2DC522C7E012B006E6B68 /* TaskViewController.swift */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
+		12A2DC4F2C7E0107006E6B68 /* TaskInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				12A2DC542C7E0131006E6B68 /* TaskInteractor.swift */,
+			);
+			path = TaskInteractor;
+			sourceTree = "<group>";
+		};
+		12A2DC502C7E0113006E6B68 /* TaskPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				12A2DC562C7E0136006E6B68 /* TaskPresenter.swift */,
+			);
+			path = TaskPresenter;
+			sourceTree = "<group>";
+		};
+		12A2DC512C7E011D006E6B68 /* TaskRouter */ = {
+			isa = PBXGroup;
+			children = (
+				12A2DC582C7E013B006E6B68 /* TaskRouter.swift */,
+			);
+			path = TaskRouter;
+			sourceTree = "<group>";
+		};
+		12A2DC622C7E3FD1006E6B68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12A2DC632C7E3FE0006E6B68 /* UIStackView + Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +275,14 @@
 			files = (
 				12BDB04E2C7CE60A003F1D60 /* ListInteractor.swift in Sources */,
 				12A2DC3F2C7DFBDA006E6B68 /* ListRouter.swift in Sources */,
+				12A2DC592C7E013B006E6B68 /* TaskRouter.swift in Sources */,
 				12BDB04A2C7CE034003F1D60 /* Task.swift in Sources */,
+				12A2DC572C7E0136006E6B68 /* TaskPresenter.swift in Sources */,
 				1245CBC72C79ECF500A10E6F /* AppDelegate.swift in Sources */,
 				1245CBC92C79ECF500A10E6F /* SceneDelegate.swift in Sources */,
+				12A2DC642C7E3FE0006E6B68 /* UIStackView + Extensions.swift in Sources */,
+				12A2DC552C7E0131006E6B68 /* TaskInteractor.swift in Sources */,
+				12A2DC532C7E012B006E6B68 /* TaskViewController.swift in Sources */,
 				12BDB0502C7CE87A003F1D60 /* ListPresenter.swift in Sources */,
 				1245CBE32C79F62E00A10E6F /* ListViewController.swift in Sources */,
 			);

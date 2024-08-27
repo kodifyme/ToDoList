@@ -8,8 +8,8 @@
 import UIKit
 
 struct Task {
-    let title: String
-    let description: String
+    var title: String
+    var description: String
     let createdAt: Date
     var isCompleted: Bool
 }

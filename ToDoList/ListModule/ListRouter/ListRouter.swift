@@ -33,11 +33,11 @@ class ListRouter: ListRouterInput {
     }
     
     func navigateToAddTask() {
-        
+        viewController?.present(TaskRouter.createModule(), animated: true)
     }
     
     func navigateToEditTask(_ task: Task) {
-        
+        viewController?.present(TaskRouter.createModule(with: task), animated: true)
     }
 }
 
