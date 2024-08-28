@@ -78,7 +78,6 @@ class TaskViewController: UIViewController {
         super.viewDidLoad()
         
         output?.viewDidLoad()
-        
         setupView()
         setupConstraints()
     }
@@ -97,7 +96,10 @@ class TaskViewController: UIViewController {
     }
     
     @objc private func didTapSave() {
-        
+        guard let title = titleTextField.text, !title.isEmpty,
+              let description = descriptionTextView.text, !description.isEmpty else { return
+        }
+        output?.didTapSaveButton(with: title, description: description, isCompleted: statusSwitch.isOn)
     }
 }
 

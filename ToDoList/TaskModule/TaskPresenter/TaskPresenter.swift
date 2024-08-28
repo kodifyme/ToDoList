@@ -7,17 +7,21 @@
 
 import UIKit
 
-class TaskPresenter: TaskViewOutput {
+class TaskPresenter {
     weak var view: TaskViewInput?
     var interactor: TaskInteractorInput?
     var router: TaskRouterInput?
-
+    
     private var task: Task?
-
+    
     init(task: Task? = nil) {
         self.task = task
     }
+}
 
+//MARK: - TaskViewOutput
+extension TaskPresenter: TaskViewOutput {
+    
     func viewDidLoad() {
         if let task = task {
             view?.setupViewForEditing(task)
@@ -27,20 +31,13 @@ class TaskPresenter: TaskViewOutput {
     }
 
     func didTapSaveButton(with title: String, description: String, isCompleted: Bool) {
-        if let task = task {
-            interactor?.updateTask(task, with: title, description: description, isCompleted: isCompleted)
-        } else {
-            interactor?.saveTask(title: title, description: description)
-        }
+        interactor?.saveTask(title: title, description: description, isCompleted: isCompleted)
     }
 }
 
+//MARK: - TaskInteractorOutput
 extension TaskPresenter: TaskInteractorOutput {
     func didSaveTask(_ task: Task) {
-        router?.dismiss()
-    }
-
-    func didUpdateTask(_ task: Task) {
         router?.dismiss()
     }
 
