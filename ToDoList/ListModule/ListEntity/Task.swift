@@ -10,6 +10,5 @@ import UIKit
 struct Task {
     var title: String
     var description: String
-    let createdAt: Date
     var isCompleted: Bool
 }

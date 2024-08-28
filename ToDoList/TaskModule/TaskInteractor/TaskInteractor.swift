@@ -20,7 +20,7 @@ class TaskInteractor: TaskInteractorInput {
     weak var output: TaskInteractorOutput?
 
     func saveTask(title: String, description: String, isCompleted: Bool) {
-        let newTask = Task(title: title, description: description, createdAt: Date(), isCompleted: isCompleted)
+        let newTask = Task(title: title, description: description, isCompleted: isCompleted)
         NotificationCenter.default.post(name: NSNotification.Name("TaskDidSave"), object: newTask)
         output?.didSaveTask(newTask)
     }
