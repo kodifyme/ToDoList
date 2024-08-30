@@ -12,8 +12,6 @@ class ListPresenter {
     weak var view: ListViewInput?
     var interactor: ListInteractorInput?
     var router: ListRouterInput?
-    
-    private var tasks: [Task] = []
 }
 
 //MARK: - ListViewOutput
@@ -24,7 +22,7 @@ extension ListPresenter: ListViewOutput {
     }
     
     func didTapAddButton() {
-        
+        router?.navigateToAddTask()
     }
     
     func didSelectTask(at index: Int) {
@@ -36,7 +34,6 @@ extension ListPresenter: ListViewOutput {
 extension ListPresenter: ListInteractorOutput {
     
     func didFetchTasks(_ tasks: [Task]) {
-        self.tasks = tasks
         view?.updateTasks(tasks)
     }
     
@@ -45,6 +42,6 @@ extension ListPresenter: ListInteractorOutput {
     }
     
     func didDeleteTask() {
-        
+        view?.updateTasks(interactor?.getTasks() ?? [])
     }
 }

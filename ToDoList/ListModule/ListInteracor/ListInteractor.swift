@@ -10,6 +10,7 @@ import UIKit
 protocol ListInteractorInput {
     func fetchTasks()
     func deleteTask(at index: Int)
+    func getTasks() -> [Task]
 }
 
 protocol ListInteractorOutput: AnyObject {
@@ -25,8 +26,8 @@ class ListInteractor: ListInteractorInput {
     
     func fetchTasks() {
         tasks = [
-            Task(title: "Task 1", description: "Description 1", createdAt: Date(), isCompleted: false),
-            Task(title: "Task 2", description: "Description 2", createdAt: Date(), isCompleted: false)
+            Task(title: "Task 1", description: "Description 1", isCompleted: false),
+            Task(title: "Task 2", description: "Description 2", isCompleted: false)
         ]
         output?.didFetchTasks(tasks)
     }
@@ -34,5 +35,9 @@ class ListInteractor: ListInteractorInput {
     func deleteTask(at index: Int) {
         tasks.remove(at: index)
         output?.didDeleteTask()
+    }
+    
+    func getTasks() -> [Task] {
+        tasks
     }
 }

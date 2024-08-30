@@ -36,10 +36,12 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        output?.viewDidLoad()
         setupNavigationBar()
         setupView()
         setupConstaints()
-        output?.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleTaskSaveNotification(_:)), name: NSNotification.Name("TaskDidSave"), object: nil)
     }
     
     private func setupNavigationBar() {
@@ -55,6 +57,13 @@ class ListViewController: UIViewController {
     
     @objc private func didTapAdd() {
         output?.didTapAddButton()
+    }
+    
+    @objc private func handleTaskSaveNotification(_ notification: Notification) {
+        if let newTask = notification.object as? Task {
+            tasks.append(newTask)
+            listTableView.reloadData()
+        }
     }
 }
 
